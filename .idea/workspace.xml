@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="b852337a-c53a-4f08-9d81-2f5f97134312" name="Default Changelist" comment="" />
+    <list default="true" id="b852337a-c53a-4f08-9d81-2f5f97134312" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StringCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StringCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/StringCalculatorShould.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StringCalculatorShould.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,7 +29,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1bknpHP1oXvi53TjoM5y76Zskep" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -30,7 +44,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunManager" selected="JUnit.StringCalculatorShould">
     <configuration name="StringCalculatorShould" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
@@ -52,6 +66,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="StringCalculatorShould.allow_different_separators" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="StringCalculatorJavaKata" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="StringCalculatorShould" />
+      <option name="METHOD_NAME" value="allow_different_separators" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="StringCalculatorShould.return_0_with_empty_string" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="StringCalculatorJavaKata" />
       <option name="PACKAGE_NAME" value="" />
@@ -65,6 +89,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.StringCalculatorShould" />
+        <item itemvalue="JUnit.StringCalculatorShould.allow_different_separators" />
         <item itemvalue="JUnit.StringCalculatorShould.return_0_with_empty_string" />
         <item itemvalue="JUnit.StringCalculatorShould.a_simple_test" />
       </list>
@@ -83,30 +108,77 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
+  </component>
   <component name="WindowStateProjectService">
-    <state width="1866" height="219" key="GridCell.Tab.0.bottom" timestamp="1589203358255">
+    <state x="100" y="100" width="1160" height="568" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1589567427330">
+      <screen x="0" y="0" width="1360" height="768" />
+    </state>
+    <state x="100" y="100" width="1160" height="568" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.768.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1589567427330" />
+    <state width="1312" height="261" key="GridCell.Tab.0.bottom" timestamp="1589567719599">
+      <screen x="0" y="0" width="1360" height="768" />
+    </state>
+    <state width="1312" height="261" key="GridCell.Tab.0.bottom/0.768.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1589567719598" />
+    <state width="1864" height="217" key="GridCell.Tab.0.bottom/266.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1589203951144" />
+    <state width="1312" height="261" key="GridCell.Tab.0.center" timestamp="1589567719598">
+      <screen x="0" y="0" width="1360" height="768" />
+    </state>
+    <state width="1312" height="261" key="GridCell.Tab.0.center/0.768.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1589567719598" />
+    <state width="1864" height="217" key="GridCell.Tab.0.center/266.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1589203951144" />
+    <state width="1312" height="261" key="GridCell.Tab.0.left" timestamp="1589567719598">
+      <screen x="0" y="0" width="1360" height="768" />
+    </state>
+    <state width="1312" height="261" key="GridCell.Tab.0.left/0.768.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1589567719598" />
+    <state width="1864" height="217" key="GridCell.Tab.0.left/266.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1589203951144" />
+    <state width="1312" height="261" key="GridCell.Tab.0.right" timestamp="1589567719598">
+      <screen x="0" y="0" width="1360" height="768" />
+    </state>
+    <state width="1312" height="261" key="GridCell.Tab.0.right/0.768.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1589567719598" />
+    <state width="1864" height="217" key="GridCell.Tab.0.right/266.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1589203951144" />
+    <state width="1312" height="222" key="GridCell.Tab.1.bottom" timestamp="1589567632721">
+      <screen x="0" y="0" width="1360" height="768" />
+    </state>
+    <state width="1312" height="222" key="GridCell.Tab.1.bottom/0.768.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1589567632721" />
+    <state width="1312" height="222" key="GridCell.Tab.1.center" timestamp="1589567632721">
+      <screen x="0" y="0" width="1360" height="768" />
+    </state>
+    <state width="1312" height="222" key="GridCell.Tab.1.center/0.768.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1589567632721" />
+    <state width="1312" height="222" key="GridCell.Tab.1.left" timestamp="1589567632721">
+      <screen x="0" y="0" width="1360" height="768" />
+    </state>
+    <state width="1312" height="222" key="GridCell.Tab.1.left/0.768.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1589567632721" />
+    <state width="1312" height="222" key="GridCell.Tab.1.right" timestamp="1589567632721">
+      <screen x="0" y="0" width="1360" height="768" />
+    </state>
+    <state width="1312" height="222" key="GridCell.Tab.1.right/0.768.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1589567632721" />
+    <state x="235" y="0" width="1125" height="768" key="SettingsEditor" timestamp="1589562124336">
+      <screen x="0" y="0" width="1360" height="768" />
+    </state>
+    <state x="235" y="0" width="1125" height="768" key="SettingsEditor/0.768.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1589562124336" />
+    <state x="651" y="142" width="1125" height="912" key="SettingsEditor/266.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1589203687708" />
+    <state x="455" y="213" width="1000" height="661" key="Vcs.Push.Dialog.v2" timestamp="1589203894517">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1866" height="219" key="GridCell.Tab.0.bottom/266.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1589203358255" />
-    <state width="1866" height="219" key="GridCell.Tab.0.center" timestamp="1589203358255">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="455" y="213" width="1000" height="661" key="Vcs.Push.Dialog.v2/266.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1589203894516" />
+    <state x="444" y="169" width="524" height="453" key="extract.method.dialog" timestamp="1589564572783">
+      <screen x="0" y="0" width="1360" height="768" />
     </state>
-    <state width="1866" height="219" key="GridCell.Tab.0.center/266.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1589203358255" />
-    <state width="1866" height="219" key="GridCell.Tab.0.left" timestamp="1589203358255">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1866" height="219" key="GridCell.Tab.0.left/266.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1589203358255" />
-    <state width="1866" height="219" key="GridCell.Tab.0.right" timestamp="1589203358255">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1866" height="219" key="GridCell.Tab.0.right/266.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1589203358255" />
-    <state x="651" y="142" width="1125" height="912" key="SettingsEditor" timestamp="1589186510904">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="651" y="142" width="1125" height="912" key="SettingsEditor/266.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1589186510904" />
-    <state x="627" y="238" width="655" height="611" key="extract.method.dialog" timestamp="1589200406195">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
+    <state x="444" y="169" width="524" height="453" key="extract.method.dialog/0.768.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1589564572783" />
     <state x="627" y="238" width="655" height="611" key="extract.method.dialog/266.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1589200406195" />
   </component>
 </project>
