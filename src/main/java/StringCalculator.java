@@ -5,40 +5,49 @@ import java.util.Optional;
 import static java.lang.Integer.parseInt;
 
 public class StringCalculator {
-    public static String add(String s) {
-        if (s.isEmpty()) {
+    public static String add(String text) {
+        if (text.isEmpty()) {
             return "0";
         }
-        if (!s.contains(",")&&!s.contains("\n")&&!s.contains("//")) {
-            return s;
+        if (!text.contains(",") && !text.contains("\n") && !text.contains("//")) {
+            return text;
         }
 
-        List<String> numbers;
-        if(s.contains("//")){
-            char separator = s.charAt(2);
-            s = s.substring(3);
-            numbers = separateString(s,separator);
-        }else{
-            numbers = separateString(s);
+        List<String> splitText;
+        if (text.contains("//")) {
+            char separator = getSeparator(text);
+            text = getTextAfterSeparator(text);
+            splitText = separateString(text, separator);
+        } else {
+            splitText = separateString(text);
         }
         int result = 0;
-        result = sum_strings(numbers, result);
+        result = sum_strings(splitText, result);
         return String.valueOf(result);
 
     }
 
-    private static List<String> separateString(String s) {
-        return Arrays.asList(s.split(",|\\n"));
-    }
-    private static List<String> separateString(String s,char separator) {
-        String regex = ",|\\n|".concat(String.valueOf(separator));
-        return Arrays.asList(s.split(regex));
+    private static String getTextAfterSeparator(String texto) {
+        return texto.substring(3);
     }
 
-    private static int sum_strings(List<String> numbers, int result) {
-        if (numbers.size() > 0) {
-            result += parseInt(numbers.get(0));
-            List<String> rest = numbers.subList(1, numbers.size());
+    private static char getSeparator(String texto) {
+        return texto.charAt(2);
+    }
+
+    private static List<String> separateString(String texto) {
+        return Arrays.asList(texto.split(",|\\n"));
+    }
+
+    private static List<String> separateString(String texto, char separator) {
+        String regex = ",|\\n|".concat(String.valueOf(separator));
+        return Arrays.asList(texto.split(regex));
+    }
+
+    private static int sum_strings(List<String> splitText, int result) {
+        if (splitText.size() > 0) {
+            result += parseInt(splitText.get(0));
+            List<String> rest = splitText.subList(1, splitText.size());
             return sum_strings(rest, result);
         }
         return result;
