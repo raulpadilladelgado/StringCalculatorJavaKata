@@ -10,9 +10,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b852337a-c53a-4f08-9d81-2f5f97134312" name="Default Changelist" comment="add support for different separators">
+    <list default="true" id="b852337a-c53a-4f08-9d81-2f5f97134312" name="Default Changelist" comment="improve custom separators functionality and refactor add function">
+      <change afterPath="$PROJECT_DIR$/.idea/StringCalculatorJavaKata.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/NegativesNotAllowedException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/StringCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StringCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/StringCalculatorShould.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StringCalculatorShould.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/StringCalculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/StringCalculator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/StringCalculatorShould.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/StringCalculatorShould.class" afterDir="false" />
     </list>
@@ -31,6 +35,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="1bknpHP1oXvi53TjoM5y76Zskep" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -40,11 +51,19 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.pathVariables" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunManager" selected="JUnit.StringCalculatorShould">
     <configuration name="StringCalculatorShould" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
@@ -56,11 +75,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StringCalculatorShould.a_simple_test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StringCalculatorShould.allow_custom_separator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="StringCalculatorJavaKata" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="StringCalculatorShould" />
-      <option name="METHOD_NAME" value="a_simple_test" />
+      <option name="METHOD_NAME" value="allow_custom_separator" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -71,6 +90,16 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="StringCalculatorShould" />
       <option name="METHOD_NAME" value="allow_different_separators" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StringCalculatorShould.not_allow_negative_numbers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="StringCalculatorJavaKata" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="StringCalculatorShould" />
+      <option name="METHOD_NAME" value="not_allow_negative_numbers" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -89,9 +118,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.StringCalculatorShould" />
+        <item itemvalue="JUnit.StringCalculatorShould.allow_custom_separator" />
+        <item itemvalue="JUnit.StringCalculatorShould.not_allow_negative_numbers" />
         <item itemvalue="JUnit.StringCalculatorShould.allow_different_separators" />
         <item itemvalue="JUnit.StringCalculatorShould.return_0_with_empty_string" />
-        <item itemvalue="JUnit.StringCalculatorShould.a_simple_test" />
       </list>
     </recent_temporary>
   </component>
@@ -105,6 +135,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1589185139972</updated>
+      <workItem from="1589794188323" duration="751000" />
+      <workItem from="1589795026367" duration="11190000" />
+      <workItem from="1589825769952" duration="2628000" />
     </task>
     <task id="LOCAL-00001" summary="add support for different separators">
       <created>1589567955098</created>
@@ -116,79 +149,120 @@
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
     <MESSAGE value="add support for different separators" />
-    <option name="LAST_COMMIT_MESSAGE" value="add support for different separators" />
+    <MESSAGE value="improve custom separators functionality and refactor add function" />
+    <option name="LAST_COMMIT_MESSAGE" value="improve custom separators functionality and refactor add function" />
   </component>
   <component name="WindowStateProjectService">
     <state x="100" y="100" width="1160" height="568" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1589567427330">
       <screen x="0" y="0" width="1360" height="768" />
     </state>
     <state x="100" y="100" width="1160" height="568" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.768.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1589567427330" />
-    <state width="1312" height="261" key="GridCell.Tab.0.bottom" timestamp="1589567898859">
-      <screen x="0" y="0" width="1360" height="768" />
+    <state x="491" y="-688" key="#com.intellij.ide.util.MemberChooser" timestamp="1589796016100">
+      <screen x="3" y="-768" width="1366" height="728" />
     </state>
+    <state x="491" y="-688" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/3.-768.1366.728@3.-768.1366.728" timestamp="1589796016100" />
+    <state x="534" y="-515" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1589794541996">
+      <screen x="3" y="-768" width="1366" height="728" />
+    </state>
+    <state x="534" y="-515" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1366.728/3.-768.1366.728@3.-768.1366.728" timestamp="1589794541996" />
+    <state x="272" y="-768" key="CommitChangelistDialog2" timestamp="1589828357326">
+      <screen x="3" y="-768" width="1366" height="728" />
+    </state>
+    <state x="272" y="-768" key="CommitChangelistDialog2/0.0.1366.728/3.-768.1366.728@3.-768.1366.728" timestamp="1589828357326" />
+    <state width="1323" height="209" key="GridCell.Tab.0.bottom" timestamp="1589828513085">
+      <screen x="3" y="-768" width="1366" height="728" />
+    </state>
+    <state width="1323" height="209" key="GridCell.Tab.0.bottom/0.0.1366.728/3.-768.1366.728@3.-768.1366.728" timestamp="1589828513085" />
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728/3.-768.1366.768@3.-768.1366.768" timestamp="1589819359871" />
     <state width="1312" height="261" key="GridCell.Tab.0.bottom/0.768.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1589567898859" />
     <state width="1864" height="217" key="GridCell.Tab.0.bottom/266.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1589203951144" />
-    <state width="1312" height="261" key="GridCell.Tab.0.center" timestamp="1589567898858">
-      <screen x="0" y="0" width="1360" height="768" />
+    <state width="1323" height="209" key="GridCell.Tab.0.center" timestamp="1589828513084">
+      <screen x="3" y="-768" width="1366" height="728" />
     </state>
+    <state width="1323" height="209" key="GridCell.Tab.0.center/0.0.1366.728/3.-768.1366.728@3.-768.1366.728" timestamp="1589828513084" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728/3.-768.1366.768@3.-768.1366.768" timestamp="1589819359871" />
     <state width="1312" height="261" key="GridCell.Tab.0.center/0.768.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1589567898858" />
     <state width="1864" height="217" key="GridCell.Tab.0.center/266.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1589203951144" />
-    <state width="1312" height="261" key="GridCell.Tab.0.left" timestamp="1589567898858">
-      <screen x="0" y="0" width="1360" height="768" />
+    <state width="1323" height="209" key="GridCell.Tab.0.left" timestamp="1589828513084">
+      <screen x="3" y="-768" width="1366" height="728" />
     </state>
+    <state width="1323" height="209" key="GridCell.Tab.0.left/0.0.1366.728/3.-768.1366.728@3.-768.1366.728" timestamp="1589828513084" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728/3.-768.1366.768@3.-768.1366.768" timestamp="1589819359871" />
     <state width="1312" height="261" key="GridCell.Tab.0.left/0.768.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1589567898858" />
     <state width="1864" height="217" key="GridCell.Tab.0.left/266.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1589203951144" />
-    <state width="1312" height="261" key="GridCell.Tab.0.right" timestamp="1589567898858">
-      <screen x="0" y="0" width="1360" height="768" />
+    <state width="1323" height="209" key="GridCell.Tab.0.right" timestamp="1589828513084">
+      <screen x="3" y="-768" width="1366" height="728" />
     </state>
+    <state width="1323" height="209" key="GridCell.Tab.0.right/0.0.1366.728/3.-768.1366.728@3.-768.1366.728" timestamp="1589828513084" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728/3.-768.1366.768@3.-768.1366.768" timestamp="1589819359871" />
     <state width="1312" height="261" key="GridCell.Tab.0.right/0.768.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1589567898858" />
     <state width="1864" height="217" key="GridCell.Tab.0.right/266.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1589203951144" />
-    <state width="1312" height="222" key="GridCell.Tab.1.bottom" timestamp="1589567632721">
-      <screen x="0" y="0" width="1360" height="768" />
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1589827778450">
+      <screen x="3" y="-768" width="1366" height="728" />
     </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728/3.-768.1366.728@3.-768.1366.728" timestamp="1589827778450" />
     <state width="1312" height="222" key="GridCell.Tab.1.bottom/0.768.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1589567632721" />
-    <state width="1312" height="222" key="GridCell.Tab.1.center" timestamp="1589567632721">
-      <screen x="0" y="0" width="1360" height="768" />
+    <state width="1323" height="223" key="GridCell.Tab.1.center" timestamp="1589827778450">
+      <screen x="3" y="-768" width="1366" height="728" />
     </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728/3.-768.1366.728@3.-768.1366.728" timestamp="1589827778450" />
     <state width="1312" height="222" key="GridCell.Tab.1.center/0.768.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1589567632721" />
-    <state width="1312" height="222" key="GridCell.Tab.1.left" timestamp="1589567632721">
-      <screen x="0" y="0" width="1360" height="768" />
+    <state width="1323" height="223" key="GridCell.Tab.1.left" timestamp="1589827778450">
+      <screen x="3" y="-768" width="1366" height="728" />
     </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728/3.-768.1366.728@3.-768.1366.728" timestamp="1589827778450" />
     <state width="1312" height="222" key="GridCell.Tab.1.left/0.768.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1589567632721" />
-    <state width="1312" height="222" key="GridCell.Tab.1.right" timestamp="1589567632721">
-      <screen x="0" y="0" width="1360" height="768" />
+    <state width="1323" height="223" key="GridCell.Tab.1.right" timestamp="1589827778450">
+      <screen x="3" y="-768" width="1366" height="728" />
     </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728/3.-768.1366.728@3.-768.1366.728" timestamp="1589827778450" />
     <state width="1312" height="222" key="GridCell.Tab.1.right/0.768.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1589567632721" />
-    <state x="235" y="0" width="1125" height="768" key="SettingsEditor" timestamp="1589562124336">
-      <screen x="0" y="0" width="1360" height="768" />
+    <state x="205" y="-768" width="998" height="716" key="SettingsEditor" timestamp="1589795123859">
+      <screen x="3" y="-768" width="1366" height="728" />
     </state>
+    <state x="205" y="-768" width="998" height="716" key="SettingsEditor/0.0.1366.728/3.-768.1366.728@3.-768.1366.728" timestamp="1589795123859" />
     <state x="235" y="0" width="1125" height="768" key="SettingsEditor/0.768.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1589562124336" />
     <state x="651" y="142" width="1125" height="912" key="SettingsEditor/266.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1589203687708" />
     <state x="455" y="213" width="1000" height="661" key="Vcs.Push.Dialog.v2" timestamp="1589203894517">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="455" y="213" width="1000" height="661" key="Vcs.Push.Dialog.v2/266.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1589203894516" />
-    <state x="444" y="169" width="524" height="460" key="extract.method.dialog" timestamp="1589568066784">
-      <screen x="0" y="0" width="1360" height="768" />
+    <state x="382" y="-580" key="com.intellij.ide.util.TipDialog" timestamp="1589795028417">
+      <screen x="3" y="-768" width="1366" height="728" />
     </state>
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728/3.-768.1366.728@0.0.1366.728" timestamp="1589794193233" />
+    <state x="382" y="-580" key="com.intellij.ide.util.TipDialog/0.0.1366.728/3.-768.1366.728@3.-768.1366.728" timestamp="1589795028417" />
+    <state x="449" y="-608" width="540" height="460" key="extract.method.dialog" timestamp="1589827954430">
+      <screen x="3" y="-768" width="1366" height="728" />
+    </state>
+    <state x="449" y="-608" width="540" height="460" key="extract.method.dialog/0.0.1366.728/3.-768.1366.728@3.-768.1366.728" timestamp="1589827954430" />
+    <state x="449" y="-599" width="540" height="460" key="extract.method.dialog/0.0.1366.728/3.-768.1366.768@3.-768.1366.768" timestamp="1589815389867" />
     <state x="444" y="169" width="524" height="460" key="extract.method.dialog/0.768.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1589568066784" />
     <state x="627" y="238" width="655" height="611" key="extract.method.dialog/266.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1589200406195" />
+    <state x="392" y="-564" width="707" height="307" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1589795076974">
+      <screen x="3" y="-768" width="1366" height="728" />
+    </state>
+    <state x="392" y="-564" width="707" height="307" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1366.728/3.-768.1366.728@3.-768.1366.728" timestamp="1589795076974" />
   </component>
 </project>
