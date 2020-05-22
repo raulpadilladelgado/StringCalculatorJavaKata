@@ -10,15 +10,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b852337a-c53a-4f08-9d81-2f5f97134312" name="Default Changelist" comment="improve custom separators functionality and refactor add function">
-      <change afterPath="$PROJECT_DIR$/.idea/StringCalculatorJavaKata.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/NegativesNotAllowedException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="b852337a-c53a-4f08-9d81-2f5f97134312" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/StringCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StringCalculator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/StringCalculatorShould.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/StringCalculatorShould.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/StringCalculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/StringCalculator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/StringCalculatorShould.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/StringCalculatorShould.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +81,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="StringCalculatorShould.allow_custom_separators" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="StringCalculatorJavaKata" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="StringCalculatorShould" />
+      <option name="METHOD_NAME" value="allow_custom_separators" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="StringCalculatorShould.allow_different_separators" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="StringCalculatorJavaKata" />
       <option name="PACKAGE_NAME" value="" />
@@ -105,23 +111,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StringCalculatorShould.return_0_with_empty_string" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="StringCalculatorJavaKata" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="StringCalculatorShould" />
-      <option name="METHOD_NAME" value="return_0_with_empty_string" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.StringCalculatorShould" />
+        <item itemvalue="JUnit.StringCalculatorShould.allow_custom_separators" />
         <item itemvalue="JUnit.StringCalculatorShould.allow_custom_separator" />
         <item itemvalue="JUnit.StringCalculatorShould.not_allow_negative_numbers" />
         <item itemvalue="JUnit.StringCalculatorShould.allow_different_separators" />
-        <item itemvalue="JUnit.StringCalculatorShould.return_0_with_empty_string" />
       </list>
     </recent_temporary>
   </component>
@@ -137,7 +133,11 @@
       <updated>1589185139972</updated>
       <workItem from="1589794188323" duration="751000" />
       <workItem from="1589795026367" duration="11190000" />
-      <workItem from="1589825769952" duration="2628000" />
+      <workItem from="1589825769952" duration="5921000" />
+      <workItem from="1589831765981" duration="109000" />
+      <workItem from="1590140840446" duration="4682000" />
+      <workItem from="1590168487184" duration="1500000" />
+      <workItem from="1590173360677" duration="1681000" />
     </task>
     <task id="LOCAL-00001" summary="add support for different separators">
       <created>1589567955098</created>
@@ -146,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589567955098</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="improve custom separators functionality and refactor add function">
+      <created>1589828532529</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1589828532529</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,57 +193,74 @@
       <screen x="3" y="-768" width="1366" height="728" />
     </state>
     <state x="534" y="-515" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1366.728/3.-768.1366.728@3.-768.1366.728" timestamp="1589794541996" />
-    <state x="272" y="-768" key="CommitChangelistDialog2" timestamp="1589828357326">
-      <screen x="3" y="-768" width="1366" height="728" />
+    <state x="269" y="0" key="CommitChangelistDialog2" timestamp="1590175243117">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="272" y="-768" key="CommitChangelistDialog2/0.0.1366.728/3.-768.1366.728@3.-768.1366.728" timestamp="1589828357326" />
-    <state width="1323" height="209" key="GridCell.Tab.0.bottom" timestamp="1589828513085">
-      <screen x="3" y="-768" width="1366" height="728" />
+    <state x="272" y="-768" key="CommitChangelistDialog2/0.0.1366.728/3.-768.1366.728@3.-768.1366.728" timestamp="1589828522152" />
+    <state x="269" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1590175243117" />
+    <state width="1323" height="223" key="GridCell.Tab.0.bottom" timestamp="1590175055541">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="209" key="GridCell.Tab.0.bottom/0.0.1366.728/3.-768.1366.728@3.-768.1366.728" timestamp="1589828513085" />
+    <state width="1323" height="223" key="GridCell.Tab.0.bottom/0.0.1366.728/3.-768.1366.728@0.0.1366.728" timestamp="1590146225267" />
+    <state width="1323" height="223" key="GridCell.Tab.0.bottom/0.0.1366.728/3.-768.1366.728@3.-768.1366.728" timestamp="1589831705873" />
     <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728/3.-768.1366.768@3.-768.1366.768" timestamp="1589819359871" />
+    <state width="1323" height="223" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1590175055541" />
     <state width="1312" height="261" key="GridCell.Tab.0.bottom/0.768.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1589567898859" />
     <state width="1864" height="217" key="GridCell.Tab.0.bottom/266.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1589203951144" />
-    <state width="1323" height="209" key="GridCell.Tab.0.center" timestamp="1589828513084">
-      <screen x="3" y="-768" width="1366" height="728" />
+    <state width="1323" height="223" key="GridCell.Tab.0.center" timestamp="1590175055541">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="209" key="GridCell.Tab.0.center/0.0.1366.728/3.-768.1366.728@3.-768.1366.728" timestamp="1589828513084" />
+    <state width="1323" height="223" key="GridCell.Tab.0.center/0.0.1366.728/3.-768.1366.728@0.0.1366.728" timestamp="1590146225267" />
+    <state width="1323" height="223" key="GridCell.Tab.0.center/0.0.1366.728/3.-768.1366.728@3.-768.1366.728" timestamp="1589831705873" />
     <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728/3.-768.1366.768@3.-768.1366.768" timestamp="1589819359871" />
+    <state width="1323" height="223" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1590175055541" />
     <state width="1312" height="261" key="GridCell.Tab.0.center/0.768.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1589567898858" />
     <state width="1864" height="217" key="GridCell.Tab.0.center/266.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1589203951144" />
-    <state width="1323" height="209" key="GridCell.Tab.0.left" timestamp="1589828513084">
-      <screen x="3" y="-768" width="1366" height="728" />
+    <state width="1323" height="223" key="GridCell.Tab.0.left" timestamp="1590175055541">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="209" key="GridCell.Tab.0.left/0.0.1366.728/3.-768.1366.728@3.-768.1366.728" timestamp="1589828513084" />
+    <state width="1323" height="223" key="GridCell.Tab.0.left/0.0.1366.728/3.-768.1366.728@0.0.1366.728" timestamp="1590146225267" />
+    <state width="1323" height="223" key="GridCell.Tab.0.left/0.0.1366.728/3.-768.1366.728@3.-768.1366.728" timestamp="1589831705873" />
     <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728/3.-768.1366.768@3.-768.1366.768" timestamp="1589819359871" />
+    <state width="1323" height="223" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1590175055541" />
     <state width="1312" height="261" key="GridCell.Tab.0.left/0.768.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1589567898858" />
     <state width="1864" height="217" key="GridCell.Tab.0.left/266.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1589203951144" />
-    <state width="1323" height="209" key="GridCell.Tab.0.right" timestamp="1589828513084">
-      <screen x="3" y="-768" width="1366" height="728" />
+    <state width="1323" height="223" key="GridCell.Tab.0.right" timestamp="1590175055541">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="209" key="GridCell.Tab.0.right/0.0.1366.728/3.-768.1366.728@3.-768.1366.728" timestamp="1589828513084" />
+    <state width="1323" height="223" key="GridCell.Tab.0.right/0.0.1366.728/3.-768.1366.728@0.0.1366.728" timestamp="1590146225267" />
+    <state width="1323" height="223" key="GridCell.Tab.0.right/0.0.1366.728/3.-768.1366.728@3.-768.1366.728" timestamp="1589831705873" />
     <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728/3.-768.1366.768@3.-768.1366.768" timestamp="1589819359871" />
+    <state width="1323" height="223" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1590175055541" />
     <state width="1312" height="261" key="GridCell.Tab.0.right/0.768.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1589567898858" />
     <state width="1864" height="217" key="GridCell.Tab.0.right/266.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1589203951144" />
-    <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1589827778450">
-      <screen x="3" y="-768" width="1366" height="728" />
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1590175055541">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728/3.-768.1366.728@3.-768.1366.728" timestamp="1589827778450" />
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728/3.-768.1366.728@0.0.1366.728" timestamp="1590146225267" />
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728/3.-768.1366.728@3.-768.1366.728" timestamp="1589831705874" />
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1590175055541" />
     <state width="1312" height="222" key="GridCell.Tab.1.bottom/0.768.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1589567632721" />
-    <state width="1323" height="223" key="GridCell.Tab.1.center" timestamp="1589827778450">
-      <screen x="3" y="-768" width="1366" height="728" />
+    <state width="1323" height="223" key="GridCell.Tab.1.center" timestamp="1590175055541">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728/3.-768.1366.728@3.-768.1366.728" timestamp="1589827778450" />
+    <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728/3.-768.1366.728@0.0.1366.728" timestamp="1590146225267" />
+    <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728/3.-768.1366.728@3.-768.1366.728" timestamp="1589831705874" />
+    <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1590175055541" />
     <state width="1312" height="222" key="GridCell.Tab.1.center/0.768.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1589567632721" />
-    <state width="1323" height="223" key="GridCell.Tab.1.left" timestamp="1589827778450">
-      <screen x="3" y="-768" width="1366" height="728" />
+    <state width="1323" height="223" key="GridCell.Tab.1.left" timestamp="1590175055541">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728/3.-768.1366.728@3.-768.1366.728" timestamp="1589827778450" />
+    <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728/3.-768.1366.728@0.0.1366.728" timestamp="1590146225267" />
+    <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728/3.-768.1366.728@3.-768.1366.728" timestamp="1589831705874" />
+    <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1590175055541" />
     <state width="1312" height="222" key="GridCell.Tab.1.left/0.768.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1589567632721" />
-    <state width="1323" height="223" key="GridCell.Tab.1.right" timestamp="1589827778450">
-      <screen x="3" y="-768" width="1366" height="728" />
+    <state width="1323" height="223" key="GridCell.Tab.1.right" timestamp="1590175055541">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728/3.-768.1366.728@3.-768.1366.728" timestamp="1589827778450" />
+    <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728/3.-768.1366.728@0.0.1366.728" timestamp="1590146225267" />
+    <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728/3.-768.1366.728@3.-768.1366.728" timestamp="1589831705874" />
+    <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1590175055541" />
     <state width="1312" height="222" key="GridCell.Tab.1.right/0.768.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1589567632721" />
     <state x="205" y="-768" width="998" height="716" key="SettingsEditor" timestamp="1589795123859">
       <screen x="3" y="-768" width="1366" height="728" />
@@ -244,9 +268,10 @@
     <state x="205" y="-768" width="998" height="716" key="SettingsEditor/0.0.1366.728/3.-768.1366.728@3.-768.1366.728" timestamp="1589795123859" />
     <state x="235" y="0" width="1125" height="768" key="SettingsEditor/0.768.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1589562124336" />
     <state x="651" y="142" width="1125" height="912" key="SettingsEditor/266.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1589203687708" />
-    <state x="455" y="213" width="1000" height="661" key="Vcs.Push.Dialog.v2" timestamp="1589203894517">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="327" y="-624" width="1000" height="661" key="Vcs.Push.Dialog.v2" timestamp="1589831792820">
+      <screen x="3" y="-768" width="1366" height="728" />
     </state>
+    <state x="327" y="-624" key="Vcs.Push.Dialog.v2/0.0.1366.728/3.-768.1366.728@3.-768.1366.728" timestamp="1589831792820" />
     <state x="455" y="213" width="1000" height="661" key="Vcs.Push.Dialog.v2/266.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1589203894516" />
     <state x="382" y="-580" key="com.intellij.ide.util.TipDialog" timestamp="1589795028417">
       <screen x="3" y="-768" width="1366" height="728" />
@@ -264,5 +289,31 @@
       <screen x="3" y="-768" width="1366" height="728" />
     </state>
     <state x="392" y="-564" width="707" height="307" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1366.728/3.-768.1366.728@3.-768.1366.728" timestamp="1589795076974" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/StringCalculator.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/StringCalculator.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/StringCalculator.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/StringCalculator.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -13,10 +14,11 @@ public class StringCalculator {
         }
 
         List<String> splitText;
-        if (text.contains("//")) {
-            String separator = getSeparator(text);
-            text = getTextAfterSeparator(text);
-            splitText = separateString(text, separator);
+        boolean textContainsSeparator = text.contains("//");
+        if (textContainsSeparator) {
+            List<String> separators = getSeparators(text);
+            text = getTextAfterSeparators(text);
+            splitText = separateString(text, separators);
         } else {
             splitText = separateString(text);
         }
@@ -27,34 +29,36 @@ public class StringCalculator {
         return !text.contains(",") && !text.contains("\n") && !text.contains("//");
     }
 
-    private static String getSeparator(String text) {
-        int indexDefaultNewLineSeparator = text.indexOf("\n");
-        boolean hasDefaultNewLineSeparator = indexDefaultNewLineSeparator > 0;
-        if (hasDefaultNewLineSeparator){
-            return text.substring(2, indexDefaultNewLineSeparator);
-        }else{
-            int indexDefaultCommaSeparator = text.indexOf(",");
-            return text.substring(2, indexDefaultCommaSeparator);
+    private static List<String> getSeparators(String text) {
+        text=text.replaceAll("[0-9]+.*[0-9]+","");
+        String[] matchCustomSeparators = text.split("\\n");
+        List<String>separators=new ArrayList<>();
+        for(String matchCustomSeparator:matchCustomSeparators){
+            matchCustomSeparator=matchCustomSeparator.replace("//","");
+            separators.add(matchCustomSeparator);
         }
+        return separators;
     }
 
-    private static String getTextAfterSeparator(String text) {
-        int indexDefaultNewLineSeparator = text.indexOf("\n");
-        boolean hasDefaultNewLineSeparator = indexDefaultNewLineSeparator > 0;
-        if (hasDefaultNewLineSeparator){
-            return text.substring(indexDefaultNewLineSeparator+1);
-        }else{
-            int indexDefaultCommaSeparator = text.indexOf(",");
-            return text.substring(indexDefaultCommaSeparator+1);
+    private static String getTextAfterSeparators(String text) {
+        String[] numbers= text.split("//.*\\n");
+        String numberText = "";
+        for(String number:numbers){
+            numberText=numberText.concat(number);
         }
+        return numberText;
     }
 
     private static List<String> separateString(String text) {
         return Arrays.asList(text.split("[,\\n]"));
     }
 
-    private static List<String> separateString(String text, String separator) {
-        String regex = ",|\\n|".concat(String.valueOf(separator));
+    private static List<String> separateString(String text, List<String> separators) {
+        String regex = "[,\\n]";
+        for (String separator:
+             separators) {
+        regex=regex.concat("|".concat(separator));
+        }
         return Arrays.asList(text.split(regex));
     }
 

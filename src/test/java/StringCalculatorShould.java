@@ -22,11 +22,11 @@ public class StringCalculatorShould {
         assertThat(StringCalculator.add("5\n5,5")).isEqualTo("15");
     }
     @Test
-    void allow_custom_separator(){
+    void allow_custom_separators(){
 
         assertThat(StringCalculator.add("//;\n1;2")).isEqualTo("3");
         assertThat(StringCalculator.add("//ggg\n1ggg2ggg3")).isEqualTo("6");
-
+        assertThat(StringCalculator.add("//ggg\n//hhh\n1ggg2hhh3")).isEqualTo("6");
     }
     @Test
     void not_allow_negative_numbers(){
